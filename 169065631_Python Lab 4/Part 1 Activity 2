@@ -1,0 +1,10 @@
+def convert_temperature(temp, unit):
+    if unit == "C":  # if C is entered, converts to farenheit
+        return (temp * 9/5) + 32  
+    elif unit == "F":  # If F is entered, converts to celcius
+        return (temp - 32) * 5/9  
+    else:
+        return "unknown unit" #returns unknown if neother is entered
+
+print(convert_temperature(90, "C")) #using function to return what 90 degrees celcius is in farenheit
+print(convert_temperature(14, "F")) #using function to return what 14 degrees farenheit is in clecius

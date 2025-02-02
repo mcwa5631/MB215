@@ -1,0 +1,17 @@
+import traceback
+
+# Function to write data to a file with error handling
+def write_to_file(filename, data):
+    try:
+        with open(filename, 'w') as file:
+            file.write(data)
+        print(f"Data was written to {filename}") #added a print statement after the file is written over so that there is confirmation it was written
+    except Exception as e:
+        print(f"An error occurred while writing to the file: {filename}")
+        traceback.print_exc()
+
+# Demonstrating the function
+if __name__ == "__main__":
+    write_to_file('Jack.txt', 'This is Jacks document!\n') #writes content to file 
+
+

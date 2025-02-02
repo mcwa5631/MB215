@@ -1,0 +1,13 @@
+import random
+
+def simulate_investment(amount, years, rate_min, rate_max):
+    for _ in range(years):  # Loop through the number of years
+        rate = random.uniform(rate_min, rate_max)  # Generate a random interest rate between rate_min and rate_max
+        amount += amount * (rate / 100)  # Apply the interest to the amount
+    return amount
+
+
+print(f"Final investment value after 5 years: ${simulate_investment(1000, 5, 2, 10):.2f}")
+
+
+

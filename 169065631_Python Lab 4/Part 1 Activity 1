@@ -1,0 +1,13 @@
+import random
+
+# Activity 1: Customizable Dice Simulator
+def roll_dice(num_dice, num_sides):
+    total = 0
+     
+    for _ in range(num_dice):  # Loop through the number of dice
+        total += random.randint(1, num_sides)  # Roll each die and add to total
+
+    return total
+
+result = roll_dice(2, 6)  #calls the roll dice function 2 dice with 6 sides each
+print("Total roll:", result) #returns the total calculated in the function

@@ -1,0 +1,22 @@
+import traceback
+# Function to read data from a file with error handling
+def read_from_file(filename):
+    try:
+        # Open the file in read mode
+        with open(filename, 'r') as file:
+            #reads the file and returns what was read
+            return file.read()
+    except Exception as e:
+        #checks if there are any errors reading from file 
+        print(f"There was an error reading from {filename}")
+        traceback.print_exc()
+        return None  # Return None if an error occurs
+
+
+if __name__ == "__main__":
+    content = read_from_file('Jack.txt') #Reads the content from Jack.txt which was created in the last activity
+    
+    if content is not None:
+        print("File content:\n", content) #checks if there is anything written in the file, if there it is will print it
+    else:
+        print("There was an error")#retruns the statement "there was an error" if it cannot read from file

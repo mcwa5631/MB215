@@ -1,0 +1,7 @@
+import random  # Import the random module
+
+# Activity 3: Generate a Single Random Number
+def generate_random_number(min_val, max_val):
+    return random.randint(min_val, max_val)  # uses random module to generate a random number between a min and max value 
+
+print(generate_random_number(1, 10))  # random number generated between 1 and 10 

@@ -1,0 +1,16 @@
+import traceback
+
+# ceates a function to a appeand a file using its name and the data that will be used
+def append_to_file(filename, data):
+    try:
+        with open(filename, 'a') as file: #opens file in append mode 
+            file.write(data)
+        print(f"Data successfully appended to {filename}") #prints out statement to confirm file was succesfully appended
+    except Exception as e:
+        #exception for any errors that occur
+        print(f"An error occurred while appending to the file: {filename}") #prints out a statement if there was an error 
+        traceback.print_exc()
+
+if __name__ == "__main__":
+
+    append_to_file('Jack.txt', 'This is the appended text.\n') #appends the data to the file using the funtion
